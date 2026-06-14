@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations — Ember &amp; Oak</title>
+  <meta name="description" content="Reserve a table at Ember &amp; Oak. Book online or call us directly. Fine dining in London — open Tuesday to Sunday." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to content</a>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <header id="mainNav" role="banner">
+    <nav class="container-xl px-4 px-lg-5 d-flex align-items-center justify-content-between" style="height:80px;" aria-label="Primary navigation">
+      <a href="index.html" class="navbar-brand">Ember <span class="ampersand">&amp;</span> Oak</a>
+      <ul class="navbar-nav flex-row d-none d-lg-flex gap-1" role="list">
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservations.html" aria-current="page">Reservations</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <a href="tel:+442071234567" class="nav-phone">+44 20 7123 4567</a>
+        <a href="reservations.html" class="btn btn-ember btn-sm">Reserve a Table</a>
+      </div>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <span class="offcanvas-title" id="mobileNavLabel">Ember <span class="ampersand">&amp;</span> Oak</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="flex-grow-1 pt-2">
+        <ul class="navbar-nav flex-column">
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="reservations.html" aria-current="page">Reservations</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="pb-4 pt-3" style="border-top:1px solid rgba(245,240,232,0.2)">
+        <a href="reservations.html" class="btn btn-ember w-100 mb-3">Reserve a Table</a>
+        <a href="tel:+442071234567" class="nav-phone d-flex justify-content-center">+44 20 7123 4567</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero hero-md">
+      <div class="hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="separator" aria-hidden="true">/</li>
+            <li aria-current="page">Reservations</li>
+          </ol>
+        </nav>
+        <div class="hero-label">Book a Table</div>
+        <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);">Reservations</h1>
+        <p class="hero-subtitle">
+          We look forward to welcoming you. For parties of 9 or more, or special occasions, please call us directly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Form section -->
+    <section class="section-light section-pad" aria-labelledby="res-form-heading">
+      <div class="container-xl px-4 px-lg-5">
+        <div class="row g-5 g-lg-6 align-items-start">
+
+          <!-- Left: Form -->
+          <div class="col-12 col-lg-7 animate-on-scroll">
+
+            <div id="reservationFormWrap">
+              <h2 id="res-form-heading" class="font-display fw-light mb-1" style="font-size:clamp(1.75rem,3.5vw,2.75rem);color:var(--forest);">
+                Request a Reservation
+              </h2>
+              <p class="mb-5" style="font-size:.9rem;color:var(--stone);">
+                Fill in the details below and we will confirm your booking by email within 2 hours.
+              </p>
+
+              <form id="reservationForm" class="res-page-form" aria-label="Reservation request form" novalidate>
+
+                <!-- Date + Guests -->
+                <div class="row g-3 mb-3">
+                  <div class="col-12 col-sm-6">
+                    <label for="res-date" class="form-label">Preferred Date</label>
+                    <input id="res-date" type="date" class="form-control" required data-min-today aria-required="true" />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <label for="res-guests" class="form-label">Number of Guests</label>
+                    <select id="res-guests" class="form-select" aria-required="true">
+                      <option>1 guest</option>
+                      <option selected>2 guests</option>
+                      <option>3 guests</option>
+                      <option>4 guests</option>
+                      <option>5 guests</option>
+                      <option>6 guests</option>
+                      <option>7 guests</option>
+                      <option>8 or more — please call us</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Time -->
+                <div class="mb-3">
+                  <label for="res-time" class="form-label">Preferred Time</label>
+                  <select id="res-time" class="form-select" required aria-required="true">
+                    <option value="">Select a time</option>
+                    <optgroup label="Lunch (Fri – Sun)">
+                      <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option>
+                    </optgroup>
+                    <optgroup label="Dinner">
+                      <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Name + Email -->
+                <div class="row g-3 mb-3">
+                  <div class="col-12 col-sm-6">
+                    <label for="res-name" class="form-label">Full Name</label>
+                    <input id="res-name" type="text" class="form-control" placeholder="Jane Smith" required aria-required="true" autocomplete="name" />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <label for="res-email" class="form-label">Email Address</label>
+                    <input id="res-email" type="email" class="form-control" placeholder="jane@example.com" required aria-required="true" autocomplete="email" />
+                  </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="mb-4">
+                  <label for="res-notes" class="form-label">
+                    Special Requests <span style="color:var(--stone);font-size:.75rem;">(optional)</span>
+                  </label>
+                  <textarea id="res-notes" class="form-control" rows="4" placeholder="Dietary requirements, special occasion, seating preferences…" aria-label="Special requests"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-ember d-flex align-items-center gap-2">
+                  <span class="btn-text">Request Table</span>
+                  <span class="btn-spinner d-none">
+                    <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                  </span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+
+                <p class="mt-3 mb-0" style="font-size:.75rem;color:var(--stone);">
+                  A credit card may be required to secure your booking. A 48-hour cancellation policy applies.
+                </p>
+              </form>
+            </div>
+
+            <!-- Success -->
+            <div id="reservationSuccess" class="success-state" style="display:none;" role="alert" aria-live="polite">
+              <div class="success-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" stroke="var(--ember)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="font-display fw-light" style="font-size:1.75rem;color:var(--forest);margin-bottom:.75rem;">Reservation Requested</h3>
+              <p style="color:var(--stone);font-size:1rem;">
+                Thank you — we'll send a confirmation to your email within 2 hours. We look forward to welcoming you.
+              </p>
+              <a href="menu.html" class="btn btn-outline-forest mt-3">Browse the Menu</a>
+            </div>
+
+          </div>
+
+          <!-- Right: Info -->
+          <div class="col-12 col-lg-5 animate-on-scroll from-right">
+            <div class="p-4 p-md-5 rounded-1" style="background:var(--cream);border:1px solid rgba(26,36,32,.07);">
+              <h3 class="font-display fw-light mb-4" style="font-size:1.5rem;color:var(--forest);">Opening Hours</h3>
+              <dl style="margin:0;">
+                <div class="d-flex justify-content-between align-items-baseline border-bottom pb-2 mb-2" style="border-color:rgba(26,36,32,.08)!important;">
+                  <dt style="font-size:.875rem;color:var(--stone);font-weight:400;">Monday</dt>
+                  <dd style="margin:0;font-size:.875rem;color:var(--forest);font-weight:500;">Closed</dd>
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline border-bottom pb-2 mb-2" style="border-color:rgba(26,36,32,.08)!important;">
+                  <dt style="font-size:.875rem;color:var(--stone);font-weight:400;">Tuesday – Thursday</dt>
+                  <dd style="margin:0;font-size:.875rem;color:var(--forest);font-weight:500;">18:00 – 22:00</dd>
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline border-bottom pb-2 mb-2" style="border-color:rgba(26,36,32,.08)!important;">
+                  <dt style="font-size:.875rem;color:var(--stone);font-weight:400;">Friday – Saturday</dt>
+                  <dd style="margin:0;font-size:.875rem;color:var(--forest);font-weight:500;">12:00 – 22:30</dd>
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline">
+                  <dt style="font-size:.875rem;color:var(--stone);font-weight:400;">Sunday</dt>
+                  <dd style="margin:0;font-size:.875rem;color:var(--forest);font-weight:500;">12:00 – 17:00</dd>
+                </div>
+              </dl>
+
+              <hr style="border-color:rgba(26,36,32,.08);margin:1.5rem 0;" />
+
+              <h3 class="font-display fw-light mb-3" style="font-size:1.3rem;color:var(--forest);">Contact</h3>
+              <p style="font-size:.875rem;color:var(--stone);margin-bottom:.5rem;">
+                <a href="tel:+442071234567" style="color:var(--forest);text-decoration:none;font-weight:500;">+44 (0) 20 7123 4567</a>
+              </p>
+              <p style="font-size:.875rem;color:var(--stone);margin-bottom:0;">
+                <a href="mailto:hello@emberandoak.com" style="color:var(--forest);text-decoration:none;font-weight:500;">hello@emberandoak.com</a>
+              </p>
+
+              <hr style="border-color:rgba(26,36,32,.08);margin:1.5rem 0;" />
+
+              <h3 class="font-display fw-light mb-3" style="font-size:1.3rem;color:var(--forest);">Private Dining</h3>
+              <p style="font-size:.875rem;color:var(--stone);line-height:1.65;">
+                Our private dining room seats up to 18 guests. Available for exclusive hire for celebrations,
+                corporate events and special occasions.
+              </p>
+              <a href="contact.html" style="font-size:.875rem;font-weight:500;color:var(--ember);text-decoration:none;">
+                Enquire about private dining →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="siteFooter" role="contentinfo">
+    <div class="container-xl px-4 px-lg-5 py-5">
+      <div class="row g-5">
+        <div class="col-12 col-md-7">
+          <a href="index.html" class="footer-brand">Ember <span class="ampersand">&amp;</span> Oak</a>
+          <p class="footer-tagline">Where fire meets finesse. A celebration of craft, season and the pursuit of an unforgettable meal.</p>
+          <address class="not-italic footer-contact">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              14 Hearthstone Lane, London W1G 9PQ
+            </span>
+            <a href="tel:+442071234567">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              +44 (0) 20 7123 4567
+            </a>
+            <a href="mailto:hello@emberandoak.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              hello@emberandoak.com
+            </a>
+          </address>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="row g-4">
+            <div class="col-6">
+              <h3 class="footer-nav-title">Navigate</h3>
+              <ul class="footer-links">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h3 class="footer-nav-title">Hours</h3>
+              <ul class="footer-hours">
+                <li>Mon — Closed</li>
+                <li>Tue – Thu — 18:00–22:00</li>
+                <li>Fri – Sat — 12:00–22:30</li>
+                <li>Sun — 12:00–17:00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-xl px-4 px-lg-5">
+        <p>&copy; 2026 Ember &amp; Oak Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <style>
+    .spin { animation: spinIt 1s linear infinite; }
+    @keyframes spinIt { to { transform: rotate(360deg); } }
+  </style>
+
+</body>
+</html>

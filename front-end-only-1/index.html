@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember &amp; Oak — Contemporary Fine Dining, London</title>
+  <meta name="description" content="Ember &amp; Oak — contemporary fine dining in London. Wood-fired cuisine, seasonal tasting menus, and an exceptional wine cellar. Reserve your table today." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="grain-overlay">
+
+  <a href="#main-content" class="skip-nav">Skip to content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <header id="mainNav" role="banner">
+    <nav class="container-xl px-4 px-lg-5 d-flex align-items-center justify-content-between" style="height:80px;" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand" aria-label="Ember &amp; Oak — home">
+        Ember <span class="ampersand">&amp;</span> Oak
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="navbar-nav flex-row d-none d-lg-flex gap-1" role="list">
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <a href="tel:+442071234567" class="nav-phone" aria-label="Call +44 20 7123 4567">
+          +44 20 7123 4567
+        </a>
+        <a href="reservations.html" class="btn btn-ember btn-sm">Reserve a Table</a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler d-lg-none" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+              aria-controls="mobileNav" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile offcanvas -->
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <span class="offcanvas-title" id="mobileNavLabel">Ember <span class="ampersand">&amp;</span> Oak</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="flex-grow-1 pt-2" aria-label="Mobile navigation">
+        <ul class="navbar-nav flex-column" role="list">
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="pb-4 pt-3" style="border-top:1px solid rgba(245,240,232,0.2)">
+        <a href="reservations.html" class="btn btn-ember w-100 mb-3">Reserve a Table</a>
+        <a href="tel:+442071234567" class="nav-phone d-flex justify-content-center">+44 20 7123 4567</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Hero ───────────────────────────────────────────────── -->
+    <section class="hero" aria-label="Hero">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80" alt="" class="hero-bg-photo" aria-hidden="true" />
+      <div class="hero-ember-glow" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow" aria-hidden="true">Est. 2019 · London</div>
+
+        <h1 class="hero-title">
+          Where <span class="ember-word">Fire</span> Meets
+          <br /><span class="ember-word">Finesse</span>
+        </h1>
+
+        <p class="hero-tagline">
+          A wood-fired kitchen celebrating the finest seasonal produce,<br class="d-none d-md-block" />
+          honest craft, and the art of an unhurried meal.
+        </p>
+
+        <div class="hero-ctas d-flex align-items-center justify-content-center gap-3 flex-wrap">
+          <a href="reservations.html" class="btn btn-ember px-4 px-md-5">Reserve a Table</a>
+          <a href="menu.html" class="btn btn-outline-cream px-4 px-md-5">View Menu</a>
+        </div>
+
+        <div class="hero-awards" aria-label="Awards and recognition">
+          <span>2 AA Rosettes</span>
+          <span class="hero-awards-sep" aria-hidden="true"></span>
+          <span>Michelin Guide Listed</span>
+          <span class="hero-awards-sep" aria-hidden="true"></span>
+          <span>Sunday Times Top 100</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Discover</span>
+      </div>
+
+      <div class="hero-fade-bottom" aria-hidden="true"></div>
+    </section>
+
+
+    <!-- ── Featured Dishes ─────────────────────────────────────── -->
+    <section class="section-light section-pad" aria-labelledby="dishes-heading">
+      <div class="container-xl px-4 px-lg-5">
+
+        <div class="section-header center text-center animate-on-scroll">
+          <span class="label-caps text-stone">From the Kitchen</span>
+          <h2 id="dishes-heading" class="text-forest">Signature Dishes</h2>
+          <p class="text-stone mx-auto">
+            Each plate begins with the best produce the season can offer,
+            then passes through fire and the hands of our kitchen team.
+          </p>
+          <div class="section-rule mx-auto"></div>
+        </div>
+
+        <div class="row g-4 stagger-children">
+
+          <!-- Dish 1 -->
+          <div class="col-12 col-md-4 animate-on-scroll">
+            <article class="dish-card" aria-label="Wood-Fired Cornish Halibut">
+              <div class="dish-card-image">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&h=600&q=80" alt="Wood-Fired Cornish Halibut" class="img-bg" />
+                <span class="card-badge">
+                  <span class="label-caps" style="font-size:0.58rem;color:rgba(245,240,232,0.65);letter-spacing:.14em;">Chef's Selection</span>
+                </span>
+                <span class="card-price">£42</span>
+                <div class="card-hover-overlay"></div>
+              </div>
+              <div class="dish-card-body">
+                <h3>Wood-Fired Cornish Halibut</h3>
+                <p>Wild sea herbs, smoked butter, coastal greens. Sourced direct from day-boat fishermen in Newlyn.</p>
+                <div class="dish-card-footer">
+                  <span class="view-label">View on menu</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dish 2 -->
+          <div class="col-12 col-md-4 animate-on-scroll">
+            <article class="dish-card" aria-label="45-Day Aged Côte de Boeuf">
+              <div class="dish-card-image">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=80" alt="45-Day Aged Côte de Boeuf" class="img-bg" />
+                <span class="card-badge">
+                  <span class="label-caps" style="font-size:0.58rem;color:rgba(201,168,76,0.8);letter-spacing:.14em;">Signature</span>
+                </span>
+                <span class="card-price">£68</span>
+                <div class="card-hover-overlay"></div>
+              </div>
+              <div class="dish-card-body">
+                <h3>45-Day Aged Côte de Boeuf</h3>
+                <p>Burnt shallot, bone marrow, watercress. Hand-selected from our dry-ageing cave, cooked over oak embers.</p>
+                <div class="dish-card-footer">
+                  <span class="view-label">View on menu</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Dish 3 -->
+          <div class="col-12 col-md-4 animate-on-scroll">
+            <article class="dish-card" aria-label="Wild Forest Mushroom Tarte">
+              <div class="dish-card-image">
+                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=80" alt="Wild Forest Mushroom Tarte" class="img-bg" />
+                <span class="card-badge">
+                  <span class="label-caps" style="font-size:0.58rem;color:rgba(245,240,232,0.65);letter-spacing:.14em;">Plant-Based</span>
+                </span>
+                <span class="card-price">£26</span>
+                <div class="card-hover-overlay"></div>
+              </div>
+              <div class="dish-card-body">
+                <h3>Wild Forest Mushroom Tarte</h3>
+                <p>Truffle cream, aged Comté, thyme jus. A celebration of the forest floor at its autumnal finest.</p>
+                <div class="dish-card-footer">
+                  <span class="view-label">View on menu</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5 animate-on-scroll">
+          <a href="menu.html" class="btn btn-outline-forest">Explore Full Menu</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── Our Story ───────────────────────────────────────────── -->
+    <section class="section-dark section-pad" aria-labelledby="our-story-heading">
+      <div class="container-xl px-4 px-lg-5">
+        <div class="row align-items-center g-5 g-lg-5" style="row-gap:4rem!important;">
+
+          <!-- Left: text -->
+          <div class="col-12 col-lg-6 order-2 order-lg-1 animate-on-scroll from-left">
+            <div class="ornament-divider mb-4" style="color:var(--gold);">
+              <span class="label-caps" style="font-size:.75rem;letter-spacing:.18em;color:var(--gold);">Our Story</span>
+            </div>
+
+            <h2 id="our-story-heading" class="font-display fw-light text-cream mb-4" style="font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.05;">
+              Born from a love of fire,<br />
+              <em class="text-ember" style="font-style:normal;">craft and honest cooking</em>
+            </h2>
+
+            <div class="story-body-text mb-0">
+              <p class="mb-4">
+                Ember &amp; Oak began as a simple idea: that the oldest cooking techniques,
+                when combined with exceptional ingredients and quiet obsession, can create
+                something truly memorable. Our wood-fired kitchen is the heartbeat of
+                everything we do.
+              </p>
+              <p>
+                Every dish is built around what is at its very best — from coastal fishermen
+                and family farms to foragers who walk the same hills season after season.
+                We believe cooking should honour the ingredient, not overshadow it.
+              </p>
+            </div>
+
+            <blockquote class="story-quote">
+              <p>"The wood fire is not theatre — it is the method. Everything we cook, we cook with intention."</p>
+              <footer>— James Whitmore, Head Chef &amp; Co-Founder</footer>
+            </blockquote>
+
+            <div class="mt-4">
+              <a href="contact.html" class="d-inline-flex align-items-center gap-2 text-decoration-none" style="font-size:.875rem;font-weight:500;color:var(--gold);transition:color .2s;">
+                Meet our team
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: image -->
+          <div class="col-12 col-lg-6 order-1 order-lg-2 animate-on-scroll from-right">
+            <div class="story-image-wrap">
+              <div class="story-image-bg"
+                   role="img"
+                   aria-label="Head Chef James Whitmore at the wood-fired oven">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&h=1067&q=80" alt="" class="story-photo" />
+                <div class="light-sim" aria-hidden="true"></div>
+                <p class="photo-label label-caps">James Whitmore · Head Chef · Ember &amp; Oak Kitchen</p>
+              </div>
+              <div class="story-float-card">
+                <div class="year">2019</div>
+                <p>Opening year, when fire met finesse</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row animate-on-scroll">
+          <dl class="row g-4 g-md-0 text-center" style="border-top:0;">
+            <div class="col-6 col-md-3 stat-item" style="border-right:1px solid rgba(245,240,232,.2);">
+              <dt class="stat-value">2019</dt>
+              <dd class="stat-label">Founded</dd>
+            </div>
+            <div class="col-6 col-md-3 stat-item" style="border-right:1px solid rgba(245,240,232,.2);">
+              <dt class="stat-value">14</dt>
+              <dd class="stat-label">Tables</dd>
+            </div>
+            <div class="col-6 col-md-3 stat-item" style="border-right:1px solid rgba(245,240,232,.2);">
+              <dt class="stat-value">2</dt>
+              <dd class="stat-label">AA Rosettes</dd>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+              <dt class="stat-value">97%</dt>
+              <dd class="stat-label">Guest Satisfaction</dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── Press Banner ────────────────────────────────────────── -->
+    <section class="section-cream-bg section-pad-sm press-section" aria-label="Press coverage">
+      <div class="container-xl px-4 px-lg-5">
+        <p class="press-title">As featured in</p>
+        <div class="row g-4 justify-content-center animate-on-scroll stagger-children">
+          <div class="col-6 col-sm-4 col-md press-item">
+            <span class="pub-name">The Guardian</span>
+            <span class="pub-note">Best New Restaurants, 2023</span>
+          </div>
+          <div class="col-6 col-sm-4 col-md press-item">
+            <span class="pub-name">Tatler</span>
+            <span class="pub-note">London's Most Romantic Dining</span>
+          </div>
+          <div class="col-6 col-sm-4 col-md press-item">
+            <span class="pub-name">The Sunday Times</span>
+            <span class="pub-note">Top 100 Restaurants UK</span>
+          </div>
+          <div class="col-6 col-sm-4 col-md press-item">
+            <span class="pub-name">Decanter</span>
+            <span class="pub-note">Wine Experience of the Year</span>
+          </div>
+          <div class="col-6 col-sm-4 col-md press-item">
+            <span class="pub-name">Square Meal</span>
+            <span class="pub-note">Editors' Choice Award</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── Testimonials ────────────────────────────────────────── -->
+    <section class="section-light section-pad" aria-labelledby="testimonials-heading">
+      <div class="container-xl px-4 px-lg-5">
+
+        <div class="section-header center text-center animate-on-scroll mb-5">
+          <span class="label-caps text-stone">Guest Stories</span>
+          <h2 id="testimonials-heading" class="text-forest">What Our Guests Say</h2>
+          <div class="section-rule mx-auto"></div>
+        </div>
+
+        <div id="testimonialCarousel" aria-label="Guest testimonials">
+
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="testimonial-mark" aria-hidden="true">"</div>
+              <blockquote class="testimonial-quote">
+                The halibut was unlike anything I've eaten in London. The wood smoke just lifts everything.
+                We'll be back for every anniversary from now on.
+              </blockquote>
+              <footer class="testimonial-author">
+                <span class="author-name">Sophie &amp; Marcus R.</span>
+                <span class="author-detail">Visited October 2024 · 10th Anniversary</span>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="testimonial-mark" aria-hidden="true">"</div>
+              <blockquote class="testimonial-quote">
+                An exceptional evening. The tasting menu showed real restraint and confidence.
+                Truly one of the finest experiences in the city.
+              </blockquote>
+              <footer class="testimonial-author">
+                <span class="author-name">Restaurant Critic</span>
+                <div><span class="press-badge">The Guardian</span></div>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="testimonial-mark" aria-hidden="true">"</div>
+              <blockquote class="testimonial-quote">
+                Service was unhurried and considered. The somm paired each course brilliantly.
+                We stayed two hours longer than planned and didn't regret a moment.
+              </blockquote>
+              <footer class="testimonial-author">
+                <span class="author-name">James T.</span>
+                <span class="author-detail">Corporate dinner, November 2024</span>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="carousel-item">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="testimonial-mark" aria-hidden="true">"</div>
+              <blockquote class="testimonial-quote">
+                The mushroom tarte is one of the most memorable vegetarian dishes I've had anywhere.
+                Elegant, earthy, deeply satisfying.
+              </blockquote>
+              <footer class="testimonial-author">
+                <span class="author-name">Elena M.</span>
+                <span class="author-detail">Solo dining, December 2024</span>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="carousel-item">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars" aria-label="5 stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="testimonial-mark" aria-hidden="true">"</div>
+              <blockquote class="testimonial-quote">
+                Impeccable from start to finish. The wine pairing was extraordinary —
+                the sommelier clearly loves what she does.
+              </blockquote>
+              <footer class="testimonial-author">
+                <span class="author-name">Wine Editor</span>
+                <div><span class="press-badge">Decanter</span></div>
+              </footer>
+            </div>
+          </div>
+
+        </div><!-- /#testimonialCarousel -->
+
+        <div class="testimonial-controls">
+          <button class="carousel-ctrl-btn" id="testimonialPrev" aria-label="Previous testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+            <button class="carousel-dot active" role="tab" aria-label="Testimonial 1"></button>
+            <button class="carousel-dot" role="tab" aria-label="Testimonial 2"></button>
+            <button class="carousel-dot" role="tab" aria-label="Testimonial 3"></button>
+            <button class="carousel-dot" role="tab" aria-label="Testimonial 4"></button>
+            <button class="carousel-dot" role="tab" aria-label="Testimonial 5"></button>
+          </div>
+          <button class="carousel-ctrl-btn" id="testimonialNext" aria-label="Next testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── Gallery Preview ─────────────────────────────────────── -->
+    <section class="section-dark section-pad" aria-labelledby="gallery-heading">
+      <div class="container-xl px-4 px-lg-5">
+
+        <div class="row align-items-end mb-5">
+          <div class="col-12 col-md-8 animate-on-scroll">
+            <span class="label-caps" style="color:rgba(201,168,76,.75);display:block;margin-bottom:.75rem;">The Experience</span>
+            <h2 id="gallery-heading" class="font-display fw-light text-cream mb-0" style="font-size:clamp(2rem,4.5vw,3.5rem);">
+              A Glimpse Inside
+            </h2>
+          </div>
+          <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0 animate-on-scroll">
+            <a href="contact.html" class="btn btn-outline-cream btn-sm">
+              Enquire &amp; Visit
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-grid animate-on-scroll">
+          <!-- Cell 1: 2×2 -->
+          <div class="gallery-cell span-2x2" aria-label="Restaurant interior — The dining room" role="img">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&h=800&q=80" alt="" class="gallery-cell-img" />
+            <div class="gallery-cell-overlay">
+              <div class="plus-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="cell-label">The Dining Room</span>
+            </div>
+            <span class="cell-bottom-label">Interior</span>
+          </div>
+          <!-- Cell 2 -->
+          <div class="gallery-cell" aria-label="Wood-fired kitchen" role="img">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=500&h=800&q=80" alt="" class="gallery-cell-img" />
+            <div class="gallery-cell-overlay">
+              <div class="plus-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="cell-label">The Kitchen</span>
+            </div>
+            <span class="cell-bottom-label">Kitchen</span>
+          </div>
+          <!-- Cell 3 -->
+          <div class="gallery-cell" aria-label="Signature dish plating" role="img">
+            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=500&h=800&q=80" alt="" class="gallery-cell-img" />
+            <div class="gallery-cell-overlay">
+              <div class="plus-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="cell-label">Plating</span>
+            </div>
+            <span class="cell-bottom-label">Cuisine</span>
+          </div>
+          <!-- Cell 4 -->
+          <div class="gallery-cell" aria-label="Wine cellar" role="img">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&h=400&q=80" alt="" class="gallery-cell-img" />
+            <div class="gallery-cell-overlay">
+              <div class="plus-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="cell-label">Wine Cellar</span>
+            </div>
+            <span class="cell-bottom-label">Wine</span>
+          </div>
+          <!-- Cell 5 -->
+          <div class="gallery-cell span-1x2" aria-label="Private dining room" role="img">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&h=800&q=80" alt="" class="gallery-cell-img" />
+            <div class="gallery-cell-overlay">
+              <div class="plus-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="cell-label">Private Dining</span>
+            </div>
+            <span class="cell-bottom-label">Events</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── Reservation CTA ─────────────────────────────────────── -->
+    <section class="section-midnight section-pad" aria-labelledby="res-cta-heading" style="position:relative;overflow:hidden;">
+      <!-- Background glows -->
+      <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(196,98,45,.38) 0%,transparent 60%);opacity:.3;pointer-events:none;"></div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(201,168,76,.28) 0%,transparent 50%);opacity:.15;pointer-events:none;"></div>
+
+      <div class="container-xl px-4 px-lg-5" style="position:relative;z-index:1;">
+
+        <div class="section-header center text-center animate-on-scroll mb-5">
+          <span class="label-caps" style="color:rgba(201,168,76,.7);">Reservations</span>
+          <h2 id="res-cta-heading" class="fw-light text-cream font-display" style="font-size:clamp(2rem,4.5vw,3.5rem);">
+            Reserve Your Evening
+          </h2>
+          <p style="color:rgba(245,240,232,.6);max-width:480px;margin:0 auto;font-size:1rem;">
+            We look forward to welcoming you. For parties of 9 or more, please call us directly.
+          </p>
+          <div class="section-rule mx-auto mt-3"></div>
+        </div>
+
+        <div class="animate-on-scroll" style="max-width:720px;margin:0 auto;">
+          <form class="res-form-card" id="reservationForm" aria-label="Table reservation form">
+
+            <div class="row g-3 mb-4">
+              <div class="col-12 col-md-4">
+                <label for="res-date" class="form-label-dark">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Date
+                </label>
+                <input id="res-date" type="date" class="form-control input-dark" required data-min-today aria-required="true" />
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="res-guests" class="form-label-dark">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Guests
+                </label>
+                <select id="res-guests" class="form-select input-dark" aria-required="true">
+                  <option>1 guest</option>
+                  <option selected>2 guests</option>
+                  <option>3 guests</option>
+                  <option>4 guests</option>
+                  <option>5 guests</option>
+                  <option>6 guests</option>
+                  <option>7 guests</option>
+                  <option>8 or more</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="res-time" class="form-label-dark">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Time
+                </label>
+                <select id="res-time" class="form-select input-dark" required aria-required="true">
+                  <option value="">Select a time</option>
+                  <optgroup label="Lunch">
+                    <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option>
+                  </optgroup>
+                  <optgroup label="Dinner">
+                    <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row align-items-center gap-3">
+              <button type="submit" class="btn btn-ember w-100 w-sm-auto d-flex align-items-center justify-content-center gap-2">
+                <span class="btn-text">Reserve a Table</span>
+                <span class="btn-spinner d-none">
+                  <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                </span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span style="font-size:.75rem;color:rgba(245,240,232,.3);">or</span>
+              <a href="tel:+442071234567" class="d-flex align-items-center gap-2 text-decoration-none" style="font-size:.875rem;color:rgba(245,240,232,.6);transition:color .2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='rgba(245,240,232,.6)'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                +44 20 7123 4567
+              </a>
+            </div>
+
+            <p class="mt-4 mb-0 text-center" style="font-size:.75rem;color:rgba(245,240,232,.28);">
+              A credit card may be required to secure your booking.
+            </p>
+          </form>
+
+          <!-- Success -->
+          <div id="reservationSuccess" class="success-state" style="display:none;" role="alert" aria-live="polite">
+            <div class="success-icon dark">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" stroke="var(--ember)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="font-display fw-light text-cream" style="font-size:1.75rem;margin-bottom:.75rem;">Reservation Requested</h3>
+            <p style="color:rgba(245,240,232,.65);font-size:1rem;">
+              We'll send a confirmation to your email shortly. We look forward to seeing you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="hours-row animate-on-scroll">
+          <div class="row g-4 text-center">
+            <div class="col-6 col-md-3 hour-item">
+              <span class="hour-day">Monday</span>
+              <span class="hour-time">Closed</span>
+            </div>
+            <div class="col-6 col-md-3 hour-item">
+              <span class="hour-day">Tue – Thu</span>
+              <span class="hour-time">18:00 – 22:00</span>
+            </div>
+            <div class="col-6 col-md-3 hour-item">
+              <span class="hour-day">Fri – Sat</span>
+              <span class="hour-time">12:00 – 22:30</span>
+            </div>
+            <div class="col-6 col-md-3 hour-item">
+              <span class="hour-day">Sunday</span>
+              <span class="hour-time">12:00 – 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer id="siteFooter" role="contentinfo">
+    <div class="container-xl px-4 px-lg-5 py-5">
+      <div class="row g-5">
+        <!-- Brand -->
+        <div class="col-12 col-md-7">
+          <a href="index.html" class="footer-brand">Ember <span class="ampersand">&amp;</span> Oak</a>
+          <p class="footer-tagline">
+            Where fire meets finesse. A celebration of craft, season and the pursuit of an unforgettable meal.
+          </p>
+          <address class="not-italic footer-contact">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              14 Hearthstone Lane, London W1G 9PQ
+            </span>
+            <a href="tel:+442071234567">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              +44 (0) 20 7123 4567
+            </a>
+            <a href="mailto:hello@emberandoak.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              hello@emberandoak.com
+            </a>
+          </address>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Follow us on Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Follow us on Facebook">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav + Hours -->
+        <div class="col-12 col-md-5">
+          <div class="row g-4">
+            <div class="col-6">
+              <h3 class="footer-nav-title">Navigate</h3>
+              <ul class="footer-links">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h3 class="footer-nav-title">Hours</h3>
+              <ul class="footer-hours">
+                <li>Mon — Closed</li>
+                <li>Tue – Thu — 18:00–22:00</li>
+                <li>Fri – Sat — 12:00–22:30</li>
+                <li>Sun — 12:00–17:00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-xl px-4 px-lg-5">
+        <p>&copy; 2026 Ember &amp; Oak Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <style>
+    .spin { animation: spinIt 1s linear infinite; }
+    @keyframes spinIt { to { transform: rotate(360deg); } }
+    #testimonialCarousel .carousel-item { display: none; }
+    #testimonialCarousel .carousel-item.active { display: block; }
+  </style>
+
+</body>
+</html>

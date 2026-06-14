@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Ember &amp; Oak</title>
+  <meta name="description" content="Explore the Ember &amp; Oak menu — wood-fired starters, seasonal mains, and indulgent desserts. All produce sourced from trusted farmers and coastal suppliers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to content</a>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <header id="mainNav" role="banner">
+    <nav class="container-xl px-4 px-lg-5 d-flex align-items-center justify-content-between" style="height:80px;" aria-label="Primary navigation">
+      <a href="index.html" class="navbar-brand">Ember <span class="ampersand">&amp;</span> Oak</a>
+      <ul class="navbar-nav flex-row d-none d-lg-flex gap-1" role="list">
+        <li class="nav-item"><a class="nav-link" href="menu.html" aria-current="page">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <a href="tel:+442071234567" class="nav-phone">+44 20 7123 4567</a>
+        <a href="reservations.html" class="btn btn-ember btn-sm">Reserve a Table</a>
+      </div>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <span class="offcanvas-title" id="mobileNavLabel">Ember <span class="ampersand">&amp;</span> Oak</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="flex-grow-1 pt-2">
+        <ul class="navbar-nav flex-column">
+          <li><a class="nav-link" href="menu.html" aria-current="page">Menu</a></li>
+          <li><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="pb-4 pt-3" style="border-top:1px solid rgba(245,240,232,0.2)">
+        <a href="reservations.html" class="btn btn-ember w-100 mb-3">Reserve a Table</a>
+        <a href="tel:+442071234567" class="nav-phone d-flex justify-content-center">+44 20 7123 4567</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── Page Hero ─────────────────────────────────────────── -->
+    <div class="page-hero hero-md">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80" alt="" class="page-hero-img" aria-hidden="true" />
+      <div class="hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="separator" aria-hidden="true">/</li>
+            <li aria-current="page">Menu</li>
+          </ol>
+        </nav>
+        <div class="hero-label">Our Menu</div>
+        <h1 style="font-size:clamp(2.5rem,6vw,4.5rem);">The Menu</h1>
+        <p class="hero-subtitle">
+          Every dish begins with the finest seasonal produce — then passes through oak fire and careful hands.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Sticky Category Nav ────────────────────────────────── -->
+    <nav class="menu-category-nav" aria-label="Menu categories">
+      <ul role="list">
+        <li><button class="cat-btn active" data-target="starters">Starters</button></li>
+        <li><button class="cat-btn" data-target="mains">Mains</button></li>
+        <li><button class="cat-btn" data-target="sides">Sides</button></li>
+        <li><button class="cat-btn" data-target="desserts">Desserts</button></li>
+      </ul>
+    </nav>
+
+    <!-- ── Seasonal banner ───────────────────────────────────── -->
+    <div class="seasonal-banner">
+      <div class="container-xl px-4 px-lg-5">
+        <div class="seasonal-banner-inner">
+          <p class="seasonal-banner-text">
+            <strong>All dishes change with the harvest.</strong> Produce is sourced within 48 hours from coastal fishermen, family farms, and seasonal foragers. Allergen information is available on request — please speak to your server.
+          </p>
+          <span class="seasonal-badge">Summer 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Menu Sections ──────────────────────────────────────── -->
+    <div class="container-xl px-4 px-lg-5">
+
+      <!-- Starters -->
+      <section id="starters" class="menu-section-block" aria-labelledby="starters-heading">
+        <div class="row mb-4">
+          <div class="col-12 col-md-6">
+            <span class="menu-course-tag">Course 01</span>
+            <h2 id="starters-heading" class="menu-section-title">Starters</h2>
+            <div class="section-rule"></div>
+            <p class="menu-section-desc">Small plates to begin the evening. Light, considered, precise.</p>
+          </div>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Cured Chalk Stream Trout
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Crème fraîche, cucumber, dill oil, trout roe</p>
+          </div>
+          <span class="dish-row-price">£16</span>
+        </div>
+
+        <div class="dish-row highlight">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Wood-Roasted Heritage Beetroot
+              <span class="dietary-badge" title="Vegan">VE</span>
+            </h3>
+            <p class="dish-row-desc">Goat's curd, walnut, aged balsamic, micro herbs</p>
+            <p class="dish-row-note">Chef's favourite this season</p>
+          </div>
+          <span class="dish-row-price">£14</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">Smoked Chicken &amp; Ham Hock Terrine</h3>
+            <p class="dish-row-desc">Cornichons, toasted brioche, grain mustard</p>
+          </div>
+          <span class="dish-row-price">£15</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Charred Leek &amp; Grana Padano Tart
+              <span class="dietary-badge" title="Vegetarian">V</span>
+            </h3>
+            <p class="dish-row-desc">Caramelised onion, chive oil, herb salad</p>
+          </div>
+          <span class="dish-row-price">£13</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Seared Orkney Scallops
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Cauliflower purée, crispy capers, smoked paprika butter</p>
+            <p class="dish-row-note">2 per portion</p>
+          </div>
+          <span class="dish-row-price">£19</span>
+        </div>
+      </section>
+
+
+      <!-- Tasting Menu callout -->
+      <div class="tasting-callout">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-8">
+            <span class="tasting-callout-eyebrow">Available Every Evening</span>
+            <h3 class="tasting-callout-title">Chef's Tasting Menu</h3>
+            <p class="tasting-callout-desc">
+              A seven-course seasonal journey curated nightly by Head Chef James Whitmore.
+              Each course paired with wines from our cellar, or enjoyed à la carte.
+              Optional wine flight at £55 per person. Advance booking recommended.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <div class="tasting-callout-price">
+              £85
+              <small>per person</small>
+            </div>
+            <a href="reservations.html" class="btn btn-outline-cream btn-sm mt-3">Reserve for Tasting</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mains -->
+      <section id="mains" class="menu-section-block" aria-labelledby="mains-heading">
+        <div class="row mb-4">
+          <div class="col-12 col-md-6">
+            <span class="menu-course-tag">Course 02</span>
+            <h2 id="mains-heading" class="menu-section-title">Mains</h2>
+            <div class="section-rule"></div>
+            <p class="menu-section-desc">The heart of the meal — built on fire, craft and honest ingredients.</p>
+          </div>
+        </div>
+
+        <div class="dish-row highlight">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Wood-Fired Cornish Halibut
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Wild sea herbs, smoked butter, coastal greens, lemon oil</p>
+            <p class="dish-row-note">Day-boat Newlyn · Signature dish</p>
+          </div>
+          <span class="dish-row-price">£42</span>
+        </div>
+
+        <div class="dish-row highlight">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              45-Day Aged Côte de Boeuf
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Burnt shallot, bone marrow, watercress, hand-cut chips</p>
+            <p class="dish-row-note">Cooked over oak embers · to share</p>
+          </div>
+          <span class="dish-row-price">£68</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">Slow-Roasted Ibérico Pork Shoulder</h3>
+            <p class="dish-row-desc">Morcilla, quince, braised cabbage, rosemary jus</p>
+          </div>
+          <span class="dish-row-price">£36</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Wild Forest Mushroom Tarte
+              <span class="dietary-badge" title="Vegetarian">V</span>
+            </h3>
+            <p class="dish-row-desc">Truffle cream, aged Comté, thyme jus, dressed watercress</p>
+          </div>
+          <span class="dish-row-price">£26</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Heritage Breed Duck Breast
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Cherry, bitter chocolate, celeriac purée, pickled red cabbage</p>
+          </div>
+          <span class="dish-row-price">£38</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Whole Roasted Cauliflower
+              <span class="dietary-badge" title="Vegan">VE</span>
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Romesco, toasted almond, pomegranate, herb oil</p>
+          </div>
+          <span class="dish-row-price">£24</span>
+        </div>
+      </section>
+
+
+      <!-- Sides -->
+      <section id="sides" class="menu-section-block" aria-labelledby="sides-heading">
+        <div class="row mb-4">
+          <div class="col-12 col-md-6">
+            <span class="menu-course-tag">Course 03</span>
+            <h2 id="sides-heading" class="menu-section-title">Sides</h2>
+            <div class="section-rule"></div>
+            <p class="menu-section-desc">To complement your main. Portions are generous and designed to share.</p>
+          </div>
+        </div>
+
+        <div class="row g-0">
+          <div class="col-12 col-md-6">
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">Hand-Cut Chips</h3>
+                <p class="dish-row-desc">Duck fat, rosemary salt</p>
+              </div>
+              <span class="dish-row-price">£7</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">
+                  Heritage Tomato Salad
+                  <span class="dietary-badge" title="Vegan">VE</span>
+                  <span class="dietary-badge" title="Gluten-Free">GF</span>
+                </h3>
+                <p class="dish-row-desc">Aged red wine vinegar, basil, shallot</p>
+              </div>
+              <span class="dish-row-price">£8</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">
+                  Buttered Purple-Sprouting Broccoli
+                  <span class="dietary-badge" title="Vegetarian">V</span>
+                  <span class="dietary-badge" title="Gluten-Free">GF</span>
+                </h3>
+                <p class="dish-row-desc">Toasted pine nuts, lemon</p>
+              </div>
+              <span class="dish-row-price">£7</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">
+                  Ember-Roasted Hispi Cabbage
+                  <span class="dietary-badge" title="Vegan">VE</span>
+                </h3>
+                <p class="dish-row-desc">Smoked paprika, crispy shallots</p>
+              </div>
+              <span class="dish-row-price">£7</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">
+                  Sourdough &amp; Cultured Butter
+                  <span class="dietary-badge" title="Vegetarian">V</span>
+                </h3>
+                <p class="dish-row-desc">Baked fresh daily, smoked sea salt</p>
+              </div>
+              <span class="dish-row-price">£5</span>
+            </div>
+            <div class="dish-row">
+              <div class="dish-row-info">
+                <h3 class="dish-row-name">
+                  Dressed Little Gem
+                  <span class="dietary-badge" title="Vegan">VE</span>
+                  <span class="dietary-badge" title="Gluten-Free">GF</span>
+                </h3>
+                <p class="dish-row-desc">Caesar dressing, anchovy crumb — available without anchovy</p>
+              </div>
+              <span class="dish-row-price">£6</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Desserts -->
+      <section id="desserts" class="menu-section-block" aria-labelledby="desserts-heading">
+        <div class="row mb-4">
+          <div class="col-12 col-md-6">
+            <span class="menu-course-tag">Course 04</span>
+            <h2 id="desserts-heading" class="menu-section-title">Desserts</h2>
+            <div class="section-rule"></div>
+            <p class="menu-section-desc">Understated and indulgent. The perfect ending to an unhurried evening.</p>
+          </div>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">Dark Chocolate Fondant</h3>
+            <p class="dish-row-desc">Salted caramel, Madagascan vanilla ice cream</p>
+            <p class="dish-row-note">Allow 12 minutes</p>
+          </div>
+          <span class="dish-row-price">£12</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Burnt Basque Cheesecake
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Poached seasonal fruit, honeycomb</p>
+          </div>
+          <span class="dish-row-price">£10</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Lemon Posset
+              <span class="dietary-badge" title="Vegetarian">V</span>
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Almond shortbread, seasonal berry coulis</p>
+          </div>
+          <span class="dish-row-price">£9</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">British &amp; French Cheese Selection</h3>
+            <p class="dish-row-desc">Three cheeses from our board, quince, oatcakes, grapes</p>
+            <p class="dish-row-note">Please ask your server for today's selection</p>
+          </div>
+          <span class="dish-row-price">£14</span>
+        </div>
+
+        <div class="dish-row">
+          <div class="dish-row-info">
+            <h3 class="dish-row-name">
+              Affogato
+              <span class="dietary-badge" title="Vegetarian">V</span>
+              <span class="dietary-badge" title="Gluten-Free">GF</span>
+            </h3>
+            <p class="dish-row-desc">Single-origin espresso, vanilla ice cream, optional shot of Kahlúa</p>
+          </div>
+          <span class="dish-row-price">£8</span>
+        </div>
+
+      </section>
+
+      <!-- Allergen note -->
+      <div class="menu-note-box mb-5 animate-on-scroll">
+        <div class="dietary-key mb-3">
+          <span class="dietary-key-item"><span class="dietary-key-badge">V</span> Vegetarian</span>
+          <span class="dietary-key-item"><span class="dietary-key-badge">VE</span> Vegan</span>
+          <span class="dietary-key-item"><span class="dietary-key-badge">GF</span> Gluten-Free</span>
+        </div>
+        <p>
+          Our dishes are prepared in a kitchen that handles all major allergens including nuts, gluten, dairy, shellfish and eggs.
+          Please inform your server of any allergies or dietary requirements before ordering.
+          All prices are inclusive of VAT. A discretionary service charge of 12.5% will be added to your bill.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ── Reservation CTA strip ──────────────────────────────── -->
+    <div class="section-midnight section-pad-sm text-center" style="position:relative;overflow:hidden;">
+      <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(196,98,45,.3) 0%,transparent 55%);opacity:.35;pointer-events:none;"></div>
+      <div class="container-xl px-4 px-lg-5" style="position:relative;z-index:1;">
+        <p class="label-caps mb-3" style="color:rgba(201,168,76,.7);">Ready to dine?</p>
+        <h2 class="font-display fw-light text-cream mb-4" style="font-size:clamp(1.75rem,4vw,3rem);">
+          Reserve Your Table
+        </h2>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="reservations.html" class="btn btn-ember">Reserve a Table</a>
+          <a href="contact.html" class="btn btn-outline-cream">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer id="siteFooter" role="contentinfo">
+    <div class="container-xl px-4 px-lg-5 py-5">
+      <div class="row g-5">
+        <div class="col-12 col-md-7">
+          <a href="index.html" class="footer-brand">Ember <span class="ampersand">&amp;</span> Oak</a>
+          <p class="footer-tagline">Where fire meets finesse. A celebration of craft, season and the pursuit of an unforgettable meal.</p>
+          <address class="not-italic footer-contact">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              14 Hearthstone Lane, London W1G 9PQ
+            </span>
+            <a href="tel:+442071234567">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              +44 (0) 20 7123 4567
+            </a>
+            <a href="mailto:hello@emberandoak.com">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              hello@emberandoak.com
+            </a>
+          </address>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="row g-4">
+            <div class="col-6">
+              <h3 class="footer-nav-title">Navigate</h3>
+              <ul class="footer-links">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h3 class="footer-nav-title">Hours</h3>
+              <ul class="footer-hours">
+                <li>Mon — Closed</li>
+                <li>Tue – Thu — 18:00–22:00</li>
+                <li>Fri – Sat — 12:00–22:30</li>
+                <li>Sun — 12:00–17:00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-xl px-4 px-lg-5">
+        <p>&copy; 2026 Ember &amp; Oak Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
